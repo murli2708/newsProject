@@ -13,10 +13,9 @@ class NewsNotifier extends StateNotifier<TopNewsState> {
   getTopNews() async {
     try {
       TopStories news = await service.fetchNews();
-      print("dgfhgjkl;kljhghf");
       state = HomeState(data: news.data);
     } catch (e) {
-      state = ErrorState(message: "Something Went wrong");
+      state = ErrorState(message: e.toString());
     }
   }
 
@@ -35,7 +34,7 @@ class DetailedNewsNotifier extends StateNotifier<DetailedNewsState> {
       DetailedNews news = await service.fetchNewsByUUID(uuid);
       state = DetailsState(news: news);
     } catch (e) {
-      state = DetailedErrorState(message: "Something Went wrong");
+      state = DetailedErrorState(message: e.toString());
     }
   }
 }
