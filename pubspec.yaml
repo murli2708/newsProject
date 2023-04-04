@@ -36,16 +36,22 @@ dependencies:
   google_fonts: ^3.0.1
   go_router: ^5.1.3
 
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   webviewx_plus: ^0.3.3
+  flutter_native_splash: ^2.2.19
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/icon.png
+  android_12: 
+    image: assets/icon.png
+  android: true
+  ios: true
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_native_splash:
+  
   
 
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -97,8 +103,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-flutter_native_splash:
-  color: "#071b5d"
-  image: assets/icon.png
-  android: true
-  ios: true
